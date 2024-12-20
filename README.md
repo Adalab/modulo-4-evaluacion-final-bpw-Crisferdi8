@@ -16,7 +16,7 @@ Eliminar un grupo de música
 
 # Requisitos previos
 
-Node.js (se recomienda la versión 14 o superior)
+Node.js 
 
 MySQL
 
@@ -26,7 +26,7 @@ dotenv para gestionar variables de entorno
 
 Clona el repositorio:
 
- git clone + repositorio URL
+ git clone https://github.com/Adalab/modulo-4-evaluacion-final-bpw-Crisferdi8.git
  
 
 # Instala las dependencias:
@@ -158,6 +158,5 @@ node src/index.js
 # Accede a los endpoints de la API en http://localhost:4002.
 
 
-# Publicado en Render https://modulo-4-evaluacion-final-bpw-crisferdi8.onrender.com  
- NO ES RECOMDABLE ACCEDER POR ESTA URL PORQUE ME DA ERRORES
+
 
