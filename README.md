@@ -158,5 +158,8 @@ node src/index.js
 # Accede a los endpoints de la API en http://localhost:4002.
 
 
+Proyecto realizado por Cristina María Fernández Díaz.
+
+
 
 
