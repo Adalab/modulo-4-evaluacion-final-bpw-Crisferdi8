@@ -26,8 +26,8 @@ dotenv para gestionar variables de entorno
 
 Clona el repositorio:
 
-git clone <repository-url>
-cd <repository-folder>
+# git clone <repository-url>
+# cd <repository-folder>
 
 # Instala las dependencias:
 
