@@ -29,15 +29,15 @@ Clona el repositorio:
 git clone <repository-url>
 cd <repository-folder>
 
-#Instala las dependencias:
+# Instala las dependencias:
 
 npm install
 
 # Configura las variables de entorno:
 Crea un archivo .env en el directorio raíz y añade las siguientes variables:
 
-USER_DB=<tu-usuario-de-base-de-datos>
-USER_PASSWORD=<tu-contraseña-de-base-de-datos>
+# USER_DB=<tu-usuario-de-base-de-datos>
+# USER_PASSWORD=<tu-contraseña-de-base-de-datos>
 
 Inicia el servidor:
 
