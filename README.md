@@ -158,5 +158,6 @@ node src/index.js
 # Accede a los endpoints de la API en http://localhost:4002.
 
 
-# Publicado en Render https://modulo-4-evaluacion-final-bpw-crisferdi8.onrender.com
+# Publicado en Render https://modulo-4-evaluacion-final-bpw-crisferdi8.onrender.com  
+ NO ES RECOMDABLE ACCEDER POR ESTA URL PORQUE ME DA ERRORES
 
