@@ -18,9 +18,9 @@ require("dotenv").config();
 async function getDBConnection() {
     const connection = await mysql.createConnection({
         host: "mysql-359d8630-fernandezcristina87-bfb0.d.aivencloud.com",
-        user: procces.env.USER_DB,
+        user: process.env.USER_DB,
         port: "26189",
-        password: procces.env.USER_PASSWORD,
+        password: process.env.USER_PASSWORD,
         database: "music_groups"
     })
     connection.connect();
@@ -101,4 +101,35 @@ api.post("/api/group", async (req, res) => {
         })
     }
 })
-api.put("/api/group")
+
+/*
+ACTUALIZAR LOS VALORES DE UN GRUPO CON LA INFO QUE ME ENVIA FRONTEND
+    -Recoger los datos que me envia frontend
+        -id del grupo a actualizar (url params)
+        -los campos de los grupos (body params)
+    -Me conecto a la Base de datos
+    -Actualizar el registro que tenga ese id con los nuevos datos --> UPDATE
+    -Finalizar conexion
+    -Responder a frontend
+ */
+api.put("/api/group/:id", async (req, res) => {
+    const id = req.params.id;
+    console.log(req.body);
+    const { name, musical_style, song, year } = req.body;
+    const connection = await getDBConnection();
+    const query = "UPDATE music_gr SET name = ?, musical_style = ?, song = ?, year = ? WHERE id = ?";
+    const [result] = await connection.query(query, [name, musical_style, song, year, id])
+    connection.end();
+
+    res.status(200).json({ succes: true });
+})
+
+//ELIMINAR UNA RECETA
+api.delete("/api/group/:id", async (req, res) => {
+    const connection = await getDBConnection();
+    const query = "DELETE FROM music_gr WHERE id = ?";
+    const [result] = await connection.query(query, [req.params.id]);
+
+    console.log(result);
+    res.status(200).json({ succes: true });
+})
